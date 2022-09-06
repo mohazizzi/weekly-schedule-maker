@@ -30,8 +30,7 @@
 ::placeholder,
 body{
     font-family: cinema-font;
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow: hidden;
     margin: 0;
 }
 .container{

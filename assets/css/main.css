@@ -1,0 +1,476 @@
+@font-face {
+    font-family: cinema-font;
+    src: url(../fonts/Cinema\ Font.ttf) format("truetype");
+   }
+@font-face {
+    font-family: ekad-700;
+    font-weight: 700;
+    font-display: block;
+    src: url(../fonts/IRANSans-Bold-web.eot);
+    src: url(../fonts/IRANSans-Bold-web.eot?#iefix) format("eot"),
+     url(../fonts/IRANSans-Bold-web.woff2) format("woff2"),
+      url(../fonts/IRANSans-Bold-web.woff) format("woff"),
+       url(../fonts/IRANSans-Bold-web.ttf) format("ttf");
+}
+
+@font-face {
+    font-family: iransans-light;
+    font-display: block;
+    src: url(../fonts/IRANSans-Light-web.eot),
+     url(../fonts/IRANSans-Light-web.woff2) format("woff2"),
+      url(../fonts/IRANSans-Light-web.woff) format("woff"),
+       url(../fonts/IRANSans-Light-web.ttf) format("ttf");
+}
+:root{
+    --primary: #081828;
+    --secondary: #0167f3;
+    --third: rgba(196, 196, 196, .1);
+    --forth: #d6d6d6;
+}
+::placeholder,
+body{
+    font-family: cinema-font;
+    overflow: hidden;
+    margin: 0;
+}
+.container{
+    width: 80vw;
+    margin: 5rem auto;
+}
+/* ------------------schedule_maker------------------ */
+.schedule-maker{
+    display: flex;
+    justify-content: space-between;
+    margin:5rem 0;
+    height: 100vh;
+}
+.make-schedule-btn{
+    background-color: var(--primary);
+    color: var(--forth);
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    border: none;
+    margin-top: .5rem;
+    font-family: cinema-font;
+}
+.make-schedule-btn:hover{
+    background-color: var(--forth);
+    color: var(--primary);
+}
+form{
+    padding: 1rem;
+}
+.inputs-cotainer{
+    background-color: var(--primary);
+    color: var(--forth);
+    width: 300px;
+    border-radius: 10px;
+    height: fit-content;
+}
+input{
+    outline: none;
+    width: 90%;
+    height: 30px;
+    background-color: var(--third);
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 15px 5px 15px;
+}
+select{
+    margin-top: 1rem;
+    background-color: var(--third);
+    border: none;
+    color: var(--forth);
+    padding: 5px;
+    border-radius: 5px;
+    font-family: cinema-font;
+}
+form label{
+    margin-left: 10px;
+}
+form button{
+    background-color: var(--secondary);
+    color: #fff;
+    border: none;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-family: cinema-font;
+}
+form button:hover{
+    background-color: var(--forth);
+    color: var(--primary);
+}
+.list-container{
+    width: 900px;
+    height: fit-content;
+}
+.list-container_header{
+    background-color: var(--primary);
+    color: var(--forth);
+    height: fit-content;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    font-family: cinema-font;
+}
+.list-container_header_title{
+    background-color: var(--third);
+    border-radius: 5px;
+    text-align: center;
+}
+.list-container_body{
+    max-height: 400px;
+    overflow-y: scroll;
+}
+.list-container_body_lists{
+    color: var(--primary);
+    border-radius: 10px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-around; */
+    margin: 5px 0 5px 0;
+    padding: 5px 0 5px 0;
+}
+.list-container_body_title{
+    border-radius: 5px;
+    text-align: center;
+}
+.title-name{
+    margin: 5px 10px 5px 10px;
+    padding: 5px 0 5px 0;
+    width: 360px;
+}
+.title-date{
+    margin: 5px 10px 5px 10px;
+    padding: 5px 0 5px 0;
+    width: 150px;
+}
+.title-start{
+    margin: 5px 10px 5px 10px;
+    padding: 5px 0 5px 0;
+    width: 90px;
+}
+.title-end{
+    margin: 5px 10px 5px 10px;
+    padding: 5px 0 5px 0;
+    width: 90px;
+}
+.title-color{
+    margin: 5px 10px 5px 10px;
+    padding: 5px 0 5px 0;
+    width: 110px;
+}
+/* -----------------------------schedule---------------------------- */
+.schedule{
+    font-size: 1.3rem;
+    width: fit-content;
+}
+.schedule_header{
+    margin: 1rem auto;
+    width: 1210px;
+    height: 60px;
+    background-color: #081828;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--forth);
+}
+.schedule_header_weekdays{
+    background-color: var(--third);
+    height: 50px;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.schedule_header_hours{
+    position: relative;
+    background-color: var(--third);
+    height: 50px;
+    width: 1080px;
+    border-radius: 10px;
+}
+.schedule_header_hours span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.span1{right: 0px;}
+.span2{right: 90px;}
+.span3{right: 180px;}
+.span4{right: 270px;}
+.span5{right: 360px;}
+.span6{right: 450px;}
+.span7{right: 540px;}
+.span8{right: 630px;}
+.span9{right: 720px;}
+.span10{right: 810px;}
+.span11{right: 900px;}
+.span12{right: 990px;}
+/* ------------------------- */
+.schedule_body{
+    margin: 0 auto 1rem auto;
+    width: 1210px;
+    height: 60px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.schedule_body_weekdays{
+    background-color: var(--primary);
+    color: var(--forth);
+    height: 50px;
+    width: 110px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.schedule_body_hours{
+    position: relative;
+    background-color: var(--third);
+    height: 50px;
+    width: 1080px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+/* -------------------------- */
+.task{
+    position: absolute;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+/* -----------------------------------media-query----------------------------- */
+@media only screen and (max-width: 1500px){
+    .container{
+        width: 80vw;
+        margin: 0 auto;
+    }
+    /* ------------schedule_maker------------ */
+    .schedule-maker{
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .make-schedule-btn{
+        width: 100%;
+        height: 50px;
+        margin: .5rem 0 1rem 0;
+    }
+    form{
+        display: grid;
+        grid-template-areas:
+        'input input input input'
+        'sel sel sel sel'
+        'btn btn btn btn';
+        gap: 10px;
+        font-size: 1.3rem;
+    }
+    .inputs-cotainer{
+        width: 100%;
+    }
+    input{
+        grid-area: input;
+        width: 96%;
+        font-size: 1.3rem;
+        padding: 5px 2% 5px 2%;
+    }
+    select{
+        grid-area: sel;
+        font-size: 1.3rem;
+        margin-top: 0;
+    }
+    .select-group{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    form button{
+        grid-area: btn;
+        font-size: 1.3rem;
+    }
+    .list-container{
+        width: 100%;
+        height: fit-content;
+        font-size: 1.3rem;
+    }
+    .title-name{
+        margin: 5px 10px 5px 10px;
+        padding: 5px 0 5px 0;
+        width: 40%;
+    }
+    .title-date{
+        margin: 5px 10px 5px 10px;
+        padding: 5px 0 5px 0;
+        width: 20%;
+    }
+    .title-start{
+        margin: 5px 10px 5px 10px;
+        padding: 5px 0 5px 0;
+        width: 10%;
+    }
+    .title-end{
+        margin: 5px 10px 5px 10px;
+        padding: 5px 0 5px 0;
+        width: 10%;
+    }
+    .title-color{
+        margin: 5px 10px 5px 10px;
+        padding: 5px 0 5px 0;
+        width: 20%;
+    }
+}
+@media only screen and (max-width: 1105px){
+    .container{
+        width: 100vw;
+        margin: 0;
+    }
+}
+@media only screen and (max-width: 900px){
+    .container{
+        width: 100vw;
+        margin: 0;
+    }
+    /* ------------schedule_maker------------ */
+    form{
+        font-size: 1rem;
+    }
+    input{
+        font-size: 1rem;
+    }
+    select{
+        font-size: 1rem;
+    }
+    form button{
+        font-size: 1rem;
+    }
+    .list-container{
+        font-size: 1rem;
+    }
+}
+@media only screen and (max-width: 700px){
+    
+    /* ------------schedule_maker------------ */
+    form{
+        font-size: .8rem;
+    }
+    input{
+        font-size: .8rem;
+    }
+    select{
+        font-size: .8rem;
+    }
+    form button{
+        font-size: .8rem;
+    }
+    .list-container{
+        font-size: .8rem;
+    }
+    .make-schedule-btn{
+        font-size: 1rem;
+        height: 30px;
+    }
+    form button{
+        padding: 5px 0 5px;
+    }
+    .list-container_header_title{
+        margin: 5px 2px;
+    }
+}
+@media only screen and (max-width: 517px){
+    
+    /* ------------schedule_maker------------ */
+    form{
+        grid-template-areas:
+            'input input input input'
+            'sel1 sel1 sel2 sel2'
+            'sel3 sel3 sel4 sel4'
+            'btn btn btn btn';
+    }
+    .select1{
+        grid-area: sel1;
+    }
+    .select2{
+        grid-area: sel2;
+    }
+    .select3{
+        grid-area: sel3;
+    }
+    .select4{
+        grid-area: sel4;
+    }
+    .list-container{
+        font-size: .5rem;
+    }
+    .make-schedule-btn{
+        font-size: 1rem;
+        height: 30px;
+    }
+    .list-container_header_title{
+        margin: 5px 2px;
+    }
+    .list-container_body_lists{
+        margin: 5px 0 0 0;
+        padding: 0;
+    }
+    .list-container_body_title{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+@media only screen and (max-width: 322px){
+
+    form{
+        font-size: .6rem;
+    }
+    input{
+        font-size: .7rem;
+    }
+    select{
+        font-size: .6rem;
+    }
+    form button{
+        font-size: .7rem;
+    }
+    .list-container{
+        font-size: .7rem;
+    }
+    .make-schedule-btn{
+        font-size: 1rem;
+    }
+    .list-container{
+        font-size: .5rem;
+    }
+    .title-name{
+        width: 30%;
+    }
+    .title-date{
+        width: 20%;
+    }
+    .title-start{
+        width: 15%;
+    }
+    .title-end{
+        width: 15%;
+    }
+    .title-color{
+        width: 20%;
+    }
+}
